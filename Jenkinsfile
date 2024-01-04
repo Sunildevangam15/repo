@@ -1,25 +1,24 @@
-
 pipeline
 {
      agent any
-      tools {
-           maven 'maven'
+     tools {
+         maven 'Maven'
            }
       stages {
-             stage ( 'compile' ) {
+             stage('git clone') {
                     steps {
-                            sh 'mvn compile'
+                        git 'https://github.com/supriyoftw/Maven-.war-File.git'
                      }
               }
-              stage( 'test' ) {
+              stage('compile') {
                      steps {
-                             sh 'mvn test'
+                             sh 'mvn compile'
                       }
                }
-               stage( 'package' ) {
+               stage('test') {
                        steps {
-                               sh 'mvn package'
+                               sh 'mvn test'
                         }
                 }
          }
-}         
+}  
