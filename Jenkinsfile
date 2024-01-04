@@ -7,7 +7,7 @@ pipeline
       stages {
              stage('git clone') {
                     steps {
-                        git 'https://github.com/supriyoftw/Maven-.war-File.git'
+                        git 'https://github.com/Sunildevangam15/repo.git'
                      }
               }
               stage('compile') {
